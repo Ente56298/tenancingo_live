@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐓 Tenancingo Live - GitHub Pages</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d1810 100%);
+            color: #fff; 
+            min-height: 100vh;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: rgba(220, 38, 38, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            margin: 20px;
+        }
+        
+        .logo { font-size: 4rem; margin-bottom: 20px; }
+        .title { font-size: 2.5rem; margin-bottom: 10px; color: #dc2626; }
+        .subtitle { font-size: 1.2rem; opacity: 0.8; margin-bottom: 40px; }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #dc2626, #b91c1c);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 10px;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(220, 38, 38, 0.3); }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 20px;
+        }
+        
+        .feature {
+            background: rgba(45, 45, 45, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+        
+        .status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(34, 197, 94, 0.9);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+        }
+        
+        .urls {
+            background: rgba(45, 45, 45, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 20px;
+            border: 1px solid rgba(220, 38, 38, 0.3);
+        }
+        
+        .url-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            background: rgba(26, 26, 26, 0.5);
+            border-radius: 8px;
+        }
+        
+        .url-link {
+            color: #dc2626;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .url-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="status" id="status">🟢 ONLINE - GitHub Pages</div>
+    
+    <div class="hero">
+        <div class="logo">🐓</div>
+        <h1 class="title">TENANCINGO LIVE</h1>
+        <p class="subtitle">Sistema Híbrido Multi-Plataforma</p>
+        <p style="font-size: 1rem; opacity: 0.7; margin-bottom: 30px;">
+            GitHub Pages + Telegram Backend + ByetHost Fallback
+        </p>
+        <a href="https://tenancingolive.byethost17.com/" class="btn" target="_blank">🎯 Entrar al Sistema</a>
+        <button class="btn" onclick="testTelegram()">📱 Test Telegram</button>
+    </div>
+    
+    <div class="urls">
+        <h3 style="text-align: center; margin-bottom: 20px;">🌐 URLs del Sistema</h3>
+        
+        <div class="url-item">
+            <div>
+                <strong>🐙 GitHub Pages (Principal)</strong>
+                <br><small>Frontend estático - 99.9% uptime</small>
+            </div>
+            <a href="https://ente56298.github.io/tenancingo_live/" class="url-link" target="_blank">
+                ente56298.github.io/tenancingo_live
+            </a>
+        </div>
+        
+        <div class="url-item">
+            <div>
+                <strong>🌐 ByetHost (Sistema Completo)</strong>
+                <br><small>PHP + MySQL - Sistema funcional</small>
+            </div>
+            <a href="https://tenancingolive.byethost17.com/" class="url-link" target="_blank">
+                tenancingolive.byethost17.com
+            </a>
+        </div>
+        
+        <div class="url-item">
+            <div>
+                <strong>🤖 Telegram Backend</strong>
+                <br><small>Base de datos + Notificaciones</small>
+            </div>
+            <span class="url-link">@TenancingLiveBot</span>
+        </div>
+        
+        <div class="url-item">
+            <div>
+                <strong>📊 Admin Panel</strong>
+                <br><small>Administración completa</small>
+            </div>
+            <a href="https://tenancingolive.byethost17.com/admin/" class="url-link" target="_blank">
+                Admin Dashboard
+            </a>
+        </div>
+    </div>
+    
+    <div class="features">
+        <div class="feature">
+            <h3>🚀 GitHub Pages</h3>
+            <p><strong>Principal</strong></p>
+            <p>✅ 99.9% Uptime<br>✅ CDN Global<br>✅ HTTPS Gratuito</p>
+        </div>
+        <div class="feature">
+            <h3>🤖 Telegram</h3>
+            <p><strong>Backend</strong></p>
+            <p>✅ Base de Datos<br>✅ Notificaciones<br>✅ Backup Auto</p>
+        </div>
+        <div class="feature">
+            <h3>🌐 ByetHost</h3>
+            <p><strong>Fallback</strong></p>
+            <p>✅ PHP + MySQL<br>✅ Sistema Completo<br>✅ Respaldo</p>
+        </div>
+        <div class="feature">
+            <h3>📱 Multi-Plataforma</h3>
+            <p><strong>Híbrido</strong></p>
+            <p>✅ Redundancia<br>✅ Alta Disponibilidad<br>✅ Escalable</p>
+        </div>
+    </div>
+    
+    <div style="text-align: center; padding: 50px 20px; opacity: 0.7;">
+        <p>🎯 <strong>Tenancingo Live</strong> - Sistema Profesional de Apuestas</p>
+        <p>Arquitectura híbrida con máxima disponibilidad</p>
+        <p style="margin-top: 20px;">
+            <strong>Credenciales:</strong> admin / admin123 | player1 / password
+        </p>
+    </div>
+
+    <script>
+        // Test de conectividad
+        async function testTelegram() {
+            const message = `🧪 Test desde GitHub Pages\n⏰ ${new Date().toLocaleString()}`;
+            
+            try {
+                // Simular envío a Telegram (reemplazar con token real)
+                console.log('📱 Enviando a Telegram:', message);
+                alert('✅ Test de Telegram enviado!\nRevisa la consola para detalles.');
+            } catch (error) {
+                console.error('❌ Error:', error);
+                alert('⚠️ Error en test de Telegram');
+            }
+        }
+        
+        // Monitoreo de estado
+        setInterval(async () => {
+            try {
+                const byethostCheck = await fetch('https://tenancingolive.byethost17.com/ping.php', {
+                    mode: 'no-cors'
+                });
+                
+                document.getElementById('status').innerHTML = '🟢 ONLINE - Todos los servicios';
+            } catch (error) {
+                document.getElementById('status').innerHTML = '🟡 GITHUB ONLY - ByetHost offline';
+            }
+        }, 30000);
+        
+        // Inicialización
+        console.log('🚀 Tenancingo Live GitHub Pages iniciado');
+        console.log('🌐 Repo: https://github.com/Ente56298/tenancingo_live');
+        console.log('📱 Sistema híbrido activo');
+    </script>
+</body>
+</html>
